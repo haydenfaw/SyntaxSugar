@@ -19,24 +19,11 @@ namespace SyntaxSugar
             //    response = answer + "is greater than nine";
             //}
 
+            //inferred typing
             var answer = 4;
-            double userNumber;
-            Console.WriteLine($"Please give me a number to evaluate");
-            var response = Console.ReadLine();
-
-            bool isParsable = double.TryParse(response, out userNumber);
-
-            //do
-            //{
-            //    Console.WriteLine($"Please input a number");
-            //    response = Console.ReadLine();
-
-            //} while (isParsable == false);
-
-
-
-            var output = (userNumber < 9) ? $"Your number is less than nine" : $"Your number is greater than nine";
-            Console.WriteLine(output);
+            //string interpolation & ternary operator
+            var response = (answer < 9) ? $"{answer} is less than nine" : $"{answer} is greater than nine";
+            Console.WriteLine(response);
         }
     }
 }
